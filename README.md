@@ -1,4 +1,3 @@
-
 Page Rank implementation by Joseph P. Silva
 
 Based on "Searching the web"
@@ -18,8 +17,11 @@ And also WikiPedia article on PageRank algorithm at http://en.wikipedia.org/wiki
 3: Run it against the test data files:
 
 PageRanker testBadInput 1 1
+
 PageRanker test13a 100 1
+
 PageRanker test13b 100 .8
+
 PageRanker testWikiExample 100 .85
 
 
