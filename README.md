@@ -15,15 +15,15 @@ And also WikiPedia article on PageRank algorithm at http://en.wikipedia.org/wiki
 2: Usage: PageRanker filename num_iterations decay_factor
 
 3: Run it against the test data files:
-
-PageRanker testBadInput 1 1
-PageRanker test13a 100 1
-PageRanker test13b 100 .8
-PageRanker testWikiExample 100 .85
-
+<pre>
+PageRanker testBadInput 1 1<br>
+PageRanker test13a 100 1<br>
+PageRanker test13b 100 .8<br>
+PageRanker testWikiExample 100 .85<br>
+</pre>
 
 testBadInput should report:
-
+<pre>
 line 2 page links to itself...ignored
 line 3 missing second page...ignored
 line 4 no pages...ignored
@@ -35,36 +35,36 @@ A 0.333333
 C 0.333333
 B 0.5
 A 0.166667
-
+</pre>
 
 test13a and test13b based on similarly named diagram in the ACM paper
 
 Expected final results for 13a:
-
+<pre>
 *** ITERATION 100***
 5 0.142857
 4 0.142857
 3 0.142857
 2 0.285714
 1 0.285714
-
+</pre>
 values exactly match the paper
 
 
 Expected final results for 13b:
-
+<pre>
 *** ITERATION 100***
 5 0.290177
 4 0.312721
 3 0.101449
 2 0.153623
 1 0.142029
-
+</pre>
 values match the paper except the latter clearly has a typo where r(1) and r(2) are swapped
 
 
 testWikiExample expected results:
-
+<pre>
 *** ITERATION 100***
 J 0.0162111
 I 0.0162111
@@ -77,13 +77,13 @@ A 0.0302911
 D 0.0391877
 C 0.343793
 B 0.385391
-
+</pre>
 testWikiExample based on http://en.wikipedia.org/wiki/File:PageRanks-Example.svg
 note the values differ slightly from the diagram, perhaps they did some rounding slightly differently
 or handled leak pages slightly differently
 
 The Diagram has:
-
+<pre>
 A  3.3%
 B 38.4%
 C 34.3%
@@ -91,7 +91,7 @@ D  3.9%
 E  8.1%
 F  3.9%
 The other 5 unnamed nodes (G-K in test file): 1.6% each
-
+</pre>
 
 Code design thoughts:
 
